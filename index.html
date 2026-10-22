@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de ventas, comisiones y redes sociales de Fred Flintstone.">
+    <title>Fred Flintstone | Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css@1.2.0/dist/charts.min.css">
+  </head>
+  <body class="min-h-screen bg-zinc-50 text-zinc-900">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:block focus:bg-white focus:p-4 focus:text-emerald-800">Saltar al contenido</a>
+    <header class="border-b border-zinc-200 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <a href="#resumen" class="flex w-fit items-center gap-3 rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-700">
+          <span aria-hidden="true" class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-zinc-900 font-serif text-xl font-bold text-white">F.</span>
+          <span class="text-lg font-semibold">Fred Flintstone<span class="block text-xs font-normal text-zinc-500">Creator business</span></span>
+        </a>
+        <nav aria-label="Navegación principal" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+          <a href="#resumen" class="rounded py-2 text-emerald-800 underline decoration-emerald-600 underline-offset-8 focus-visible:outline-2 focus-visible:outline-emerald-700">Resumen</a>
+          <a href="#analisis" class="rounded py-2 text-zinc-600 hover:text-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-700">Análisis</a>
+          <a href="#detalles" class="rounded py-2 text-zinc-600 hover:text-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-700">Detalles</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido" class="mx-auto max-w-7xl space-y-10 px-4 py-8 sm:px-6 md:space-y-12 md:py-10 lg:px-8">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-emerald-800">Panel de resultados</p>
+          <h1 class="font-serif text-3xl font-bold md:text-4xl">Tu negocio, en cifras.</h1>
+        </div>
+        <div class="text-sm sm:text-right">
+          <p class="font-medium">Septiembre de 2026</p>
+          <p class="mt-1 text-xs text-zinc-500">01 sep – 30 sep · Datos de ejemplo</p>
+        </div>
+      </div>
+
+      <section id="resumen" aria-labelledby="titulo-resumen" class="scroll-mt-6">
+        <h2 id="titulo-resumen" class="mb-4 text-lg font-semibold">Resumen del mes</h2>
+        <dl class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <div class="min-w-0 rounded-lg border border-emerald-200 bg-emerald-50 p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+            <dt class="text-sm font-medium text-emerald-900">Comisiones generadas</dt>
+            <dd class="mt-4 text-3xl font-semibold tabular-nums text-emerald-950">1.530 €</dd>
+            <dd class="mt-2 text-xs text-emerald-800">15 % sobre las ventas</dd>
+          </div>
+          <div class="min-w-0 rounded-lg border border-t-4 border-zinc-200 border-t-sky-700 bg-white p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+            <dt class="text-sm font-medium text-zinc-600">Ventas confirmadas</dt>
+            <dd class="mt-4 text-3xl font-semibold tabular-nums">135</dd>
+            <dd class="mt-2 text-xs text-zinc-500">Compras del período</dd>
+          </div>
+          <div class="min-w-0 rounded-lg border border-t-4 border-zinc-200 border-t-cyan-700 bg-white p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+            <dt class="text-sm font-medium text-zinc-600">Tasa de conversión</dt>
+            <dd class="mt-4 text-3xl font-semibold tabular-nums text-sky-800">0,13 %</dd>
+            <dd class="mt-2 text-xs text-zinc-500">Ventas / alcance</dd>
+          </div>
+          <div class="min-w-0 rounded-lg border border-t-4 border-zinc-200 border-t-indigo-700 bg-white p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+            <dt class="text-sm font-medium text-zinc-600">Retorno publicitario</dt>
+            <dd class="mt-4 text-3xl font-semibold tabular-nums">4,94×</dd>
+            <dd class="mt-2 text-xs text-zinc-500">Comisiones / gasto en anuncios</dd>
+          </div>
+          <div class="min-w-0 rounded-lg border border-t-4 border-zinc-200 border-t-amber-600 bg-white p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+            <dt class="text-sm font-medium text-zinc-600">Engagement rate</dt>
+            <dd class="mt-4 text-3xl font-semibold tabular-nums text-amber-800">6,72 %</dd>
+            <dd class="mt-2 text-xs text-zinc-500">Interacciones / alcance</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="analisis" aria-labelledby="titulo-analisis" class="scroll-mt-6">
+        <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 id="titulo-analisis" class="text-lg font-semibold">Qué impulsa tus resultados</h2>
+          <span class="text-xs text-zinc-500">3 productos · 3 plataformas</span>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <article class="min-w-0 rounded-lg border border-t-4 border-zinc-200 border-t-emerald-700 bg-white p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6">
+            <h3 class="font-semibold">Rendimiento por producto</h3>
+            <p class="mt-1 text-xs text-zinc-500">Comisiones generadas · EUR</p>
+            <table class="charts-css bar show-labels data-outside data-spacing-12 mt-6 h-44 w-full" style="--labels-size: 5rem; --color-1: #047857; --color-2: #0369a1; --color-3: #b45309;">
+              <caption class="sr-only">Comisiones por producto. Escala de 0 a 600 euros.</caption>
+              <thead><tr><th scope="col">Producto</th><th scope="col">Comisiones (EUR)</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" class="text-xs">Producto A</th><td style="--size: 0.75; --color: #047857;"><span class="data text-xs font-semibold text-zinc-700">450 €</span></td></tr>
+                <tr><th scope="row" class="text-xs">Producto B</th><td style="--size: 0.9; --color: #0369a1;"><span class="data text-xs font-semibold text-zinc-700">540 €</span></td></tr>
+                <tr><th scope="row" class="text-xs">Producto C</th><td style="--size: 0.9; --color: #b45309;"><span class="data text-xs font-semibold text-zinc-700">540 €</span></td></tr>
+              </tbody>
+            </table>
+            <dl class="mt-6 space-y-3 border-t border-zinc-100 pt-4 text-sm">
+              <div class="flex justify-between gap-2"><dt>Producto A <span class="text-zinc-500">· 50 €</span></dt><dd class="font-medium tabular-nums">60 ventas</dd></div>
+              <div class="flex justify-between gap-2"><dt>Producto B <span class="text-zinc-500">· 120 €</span></dt><dd class="font-medium tabular-nums">30 ventas</dd></div>
+              <div class="flex justify-between gap-2"><dt>Producto C <span class="text-zinc-500">· 80 €</span></dt><dd class="font-medium tabular-nums">45 ventas</dd></div>
+            </dl>
+            <p class="mt-5 text-xs leading-relaxed text-zinc-600">B y C empatan en comisiones; B necesita menos ventas para generar el mismo ingreso.</p>
+          </article>
+
+          <article class="min-w-0 rounded-lg border border-t-4 border-zinc-200 border-t-sky-700 bg-white p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6">
+            <h3 class="font-semibold">Rendimiento por plataforma</h3>
+            <p class="mt-1 text-xs text-zinc-500">Retorno y conversión</p>
+            <h4 class="mt-5 text-xs font-medium text-zinc-600">Retorno · comisiones / gasto</h4>
+            <table class="charts-css column show-labels data-outside data-spacing-12 mt-3 h-40 w-full" style="--color: #047857; --labels-size: 1.5rem;">
+              <caption class="sr-only">Retorno por plataforma. Escala de 0 a 6 veces la inversión.</caption>
+              <thead><tr><th scope="col">Plataforma</th><th scope="col">Retorno</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" class="text-xs">Instagram</th><td style="--size: 0.85;"><span class="data text-xs font-semibold text-zinc-700">5,10×</span></td></tr>
+                <tr><th scope="row" class="text-xs">TikTok</th><td style="--size: 0.7708333333;"><span class="data text-xs font-semibold text-zinc-700">4,63×</span></td></tr>
+                <tr><th scope="row" class="text-xs">YouTube</th><td style="--size: 0.8611111111;"><span class="data text-xs font-semibold text-zinc-700">5,17×</span></td></tr>
+              </tbody>
+            </table>
+            <h4 class="mt-7 text-xs font-medium text-zinc-600">Conversión · ventas / alcance</h4>
+            <table class="charts-css column show-labels data-outside data-spacing-12 mt-3 h-40 w-full" style="--color: #0369a1; --labels-size: 1.5rem;">
+              <caption class="sr-only">Conversión por plataforma. Escala de 0 a 0,25 por ciento.</caption>
+              <thead><tr><th scope="col">Plataforma</th><th scope="col">Conversión</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" class="text-xs">Instagram</th><td style="--size: 0.6;"><span class="data text-xs font-semibold text-zinc-700">0,15 %</span></td></tr>
+                <tr><th scope="row" class="text-xs">TikTok</th><td style="--size: 0.3666666667;"><span class="data text-xs font-semibold text-zinc-700">0,09 %</span></td></tr>
+                <tr><th scope="row" class="text-xs">YouTube</th><td style="--size: 0.8;"><span class="data text-xs font-semibold text-zinc-700">0,20 %</span></td></tr>
+              </tbody>
+            </table>
+            <p class="mt-5 text-xs leading-relaxed text-zinc-600">YouTube lidera el retorno y la conversión. El retorno no representa beneficio neto.</p>
+          </article>
+
+          <article class="min-w-0 rounded-lg border border-t-4 border-zinc-200 border-t-amber-600 bg-white p-5 shadow-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6 md:col-span-2 lg:col-span-1">
+            <h3 class="font-semibold">Engagement de la audiencia</h3>
+            <p class="mt-1 text-xs text-zinc-500">Interacciones / alcance · por producto</p>
+            <ul aria-label="Leyenda de productos" class="mt-5 flex flex-wrap gap-4 text-xs text-zinc-600">
+              <li class="flex items-center gap-2"><span aria-hidden="true" class="size-2.5 rounded-sm bg-emerald-700"></span>A</li>
+              <li class="flex items-center gap-2"><span aria-hidden="true" class="size-2.5 rounded-sm bg-sky-700"></span>B</li>
+              <li class="flex items-center gap-2"><span aria-hidden="true" class="size-2.5 rounded-sm bg-amber-700"></span>C</li>
+            </ul>
+            <table class="charts-css column multiple show-labels data-outside data-spacing-8 datasets-spacing-2 mt-5 h-64 w-full" style="--color-1: #047857; --color-2: #0369a1; --color-3: #b45309; --labels-size: 2rem;">
+              <caption class="sr-only">Engagement por plataforma y producto. Orden de las barras: A, B, C. Escala de 0 a 10 por ciento.</caption>
+              <thead><tr><th scope="col">Plataforma</th><th scope="col">Producto A</th><th scope="col">Producto B</th><th scope="col">Producto C</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" class="text-xs">Instagram</th><td style="--size: 0.6;"><span class="data text-xs font-semibold text-zinc-700">6 %</span></td><td style="--size: 0.5;"><span class="data text-xs font-semibold text-zinc-700">5 %</span></td><td style="--size: 0.6;"><span class="data text-xs font-semibold text-zinc-700">6 %</span></td></tr>
+                <tr><th scope="row" class="text-xs">TikTok</th><td style="--size: 0.8;"><span class="data text-xs font-semibold text-zinc-700">8 %</span></td><td style="--size: 0.6;"><span class="data text-xs font-semibold text-zinc-700">6 %</span></td><td style="--size: 0.8;"><span class="data text-xs font-semibold text-zinc-700">8 %</span></td></tr>
+                <tr><th scope="row" class="text-xs">YouTube</th><td style="--size: 0.5;"><span class="data text-xs font-semibold text-zinc-700">5 %</span></td><td style="--size: 0.6;"><span class="data text-xs font-semibold text-zinc-700">6 %</span></td><td style="--size: 0.6;"><span class="data text-xs font-semibold text-zinc-700">6 %</span></td></tr>
+              </tbody>
+            </table>
+            <p class="mt-6 border-t border-zinc-100 pt-4 text-xs leading-relaxed text-zinc-600">A y C alcanzan un 8 % en TikTok: las combinaciones con mayor engagement del período.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="detalles" aria-labelledby="titulo-detalles" class="min-w-0 scroll-mt-6">
+        <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 id="titulo-detalles" class="text-lg font-semibold">Detalle de resultados</h2>
+          <span class="text-xs text-zinc-500">9 combinaciones de plataforma y producto</span>
+        </div>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:hidden">
+          <article class="min-w-0 rounded-lg border border-zinc-200 bg-white p-4 shadow-sm">
+            <h3 class="mb-3 text-sm font-semibold text-zinc-700">Instagram</h3>
+            <dl class="space-y-3">
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto A <span class="text-xs font-normal text-zinc-500">· 50 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">150,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">10.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">600</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">20</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">30,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,20 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">5,00×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">6,00 %</dd></div></dl></div>
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto B <span class="text-xs font-normal text-zinc-500">· 120 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">180,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">8.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">400</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">10</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">30,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,13 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">6,00×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">5,00 %</dd></div></dl></div>
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto C <span class="text-xs font-normal text-zinc-500">· 80 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">180,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">12.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">720</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">15</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">40,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,13 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">4,50×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">6,00 %</dd></div></dl></div>
+            </dl>
+          </article>
+          <article class="min-w-0 rounded-lg border border-zinc-200 bg-white p-4 shadow-sm">
+            <h3 class="mb-3 text-sm font-semibold text-zinc-700">TikTok</h3>
+            <dl class="space-y-3">
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto A <span class="text-xs font-normal text-zinc-500">· 50 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">225,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">20.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">1.600</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">30</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">40,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,15 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">5,63×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">8,00 %</dd></div></dl></div>
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto B <span class="text-xs font-normal text-zinc-500">· 120 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">90,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">15.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">900</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">5</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">30,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,03 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">3,00×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">6,00 %</dd></div></dl></div>
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto C <span class="text-xs font-normal text-zinc-500">· 80 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">240,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">25.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">2.000</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">20</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">50,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,08 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">4,80×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">8,00 %</dd></div></dl></div>
+            </dl>
+          </article>
+          <article class="min-w-0 rounded-lg border border-zinc-200 bg-white p-4 shadow-sm sm:col-span-2 md:col-span-1">
+            <h3 class="mb-3 text-sm font-semibold text-zinc-700">YouTube</h3>
+            <dl class="space-y-3">
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto A <span class="text-xs font-normal text-zinc-500">· 50 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">75,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">5.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">250</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">10</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">20,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,20 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">3,75×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">5,00 %</dd></div></dl></div>
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto B <span class="text-xs font-normal text-zinc-500">· 120 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">270,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">7.500</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">450</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">15</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">45,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,20 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">6,00×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">6,00 %</dd></div></dl></div>
+              <div class="border-t border-zinc-100 pt-3"><div class="flex justify-between gap-2"><dt class="font-medium">Producto C <span class="text-xs font-normal text-zinc-500">· 80 €</span></dt><dd class="text-right text-sm font-semibold tabular-nums">120,00 €</dd></div><dl class="mt-3 grid grid-cols-2 gap-x-2 gap-y-3 text-xs"><div><dt class="text-zinc-500">Alcance</dt><dd class="mt-0.5 font-medium tabular-nums">5.000</dd></div><div><dt class="text-zinc-500">Interacciones</dt><dd class="mt-0.5 font-medium tabular-nums">300</dd></div><div><dt class="text-zinc-500">Ventas</dt><dd class="mt-0.5 font-medium tabular-nums">10</dd></div><div><dt class="text-zinc-500">Coste</dt><dd class="mt-0.5 font-medium tabular-nums">25,00 €</dd></div><div><dt class="text-zinc-500">Conversión</dt><dd class="mt-0.5 font-medium tabular-nums">0,20 %</dd></div><div><dt class="text-zinc-500">Retorno</dt><dd class="mt-0.5 font-medium tabular-nums">4,80×</dd></div><div><dt class="text-zinc-500">Engagement</dt><dd class="mt-0.5 font-medium tabular-nums">6,00 %</dd></div></dl></div>
+            </dl>
+          </article>
+        </div>
+        <div class="hidden lg:block">
+          <table id="tabla-resultados" class="w-full table-fixed text-left text-xs tabular-nums">
+            <caption class="sr-only">Resultados de septiembre de 2026. Costes e ingresos expresados en euros. Comisión fija del 15 %.</caption>
+            <thead class="border-b border-zinc-200 bg-zinc-100 text-xs text-zinc-600">
+              <tr>
+                <th scope="col" class="px-2 py-3 font-medium">Plataforma</th><th scope="col" class="px-2 py-3 font-medium">Producto</th><th scope="col" class="px-2 py-3 text-right font-medium">Alcance</th><th scope="col" class="px-2 py-3 text-right font-medium">Interacciones</th><th scope="col" class="px-2 py-3 text-right font-medium">Ventas</th><th scope="col" class="px-2 py-3 text-right font-medium">Comisiones (€)</th><th scope="col" class="px-2 py-3 text-right font-medium">Coste (€)</th><th scope="col" class="px-2 py-3 text-right font-medium">Conversión</th><th scope="col" class="px-2 py-3 text-right font-medium">Retorno</th><th scope="col" class="px-2 py-3 text-right font-medium">Engagement</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-100 [&_td]:break-words [&_td]:px-2 [&_td]:py-3 [&_td]:text-right [&_th]:break-words [&_th]:px-2 [&_th]:py-3 [&_th]:font-medium">
+              <tr class="hover:bg-zinc-50"><th scope="row">Instagram · A</th><td>A</td><td>10.000</td><td>600</td><td>20</td><td>150,00</td><td>30,00</td><td>0,20 %</td><td>5,00×</td><td>6,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">Instagram · B</th><td>B</td><td>8.000</td><td>400</td><td>10</td><td>180,00</td><td>30,00</td><td>0,13 %</td><td>6,00×</td><td>5,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">Instagram · C</th><td>C</td><td>12.000</td><td>720</td><td>15</td><td>180,00</td><td>40,00</td><td>0,13 %</td><td>4,50×</td><td>6,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">TikTok · A</th><td>A</td><td>20.000</td><td>1.600</td><td>30</td><td>225,00</td><td>40,00</td><td>0,15 %</td><td>5,63×</td><td>8,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">TikTok · B</th><td>B</td><td>15.000</td><td>900</td><td>5</td><td>90,00</td><td>30,00</td><td>0,03 %</td><td>3,00×</td><td>6,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">TikTok · C</th><td>C</td><td>25.000</td><td>2.000</td><td>20</td><td>240,00</td><td>50,00</td><td>0,08 %</td><td>4,80×</td><td>8,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">YouTube · A</th><td>A</td><td>5.000</td><td>250</td><td>10</td><td>75,00</td><td>20,00</td><td>0,20 %</td><td>3,75×</td><td>5,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">YouTube · B</th><td>B</td><td>7.500</td><td>450</td><td>15</td><td>270,00</td><td>45,00</td><td>0,20 %</td><td>6,00×</td><td>6,00 %</td></tr>
+              <tr class="hover:bg-zinc-50"><th scope="row">YouTube · C</th><td>C</td><td>5.000</td><td>300</td><td>10</td><td>120,00</td><td>25,00</td><td>0,20 %</td><td>4,80×</td><td>6,00 %</td></tr>
+            </tbody>
+            <tfoot class="border-t-2 border-zinc-200 bg-zinc-50 font-semibold [&_td]:break-words [&_td]:px-2 [&_td]:py-3 [&_td]:text-right">
+              <tr><th scope="row" colspan="2" class="px-2 py-3">Total del período</th><td>107.500</td><td>7.220</td><td>135</td><td>1.530,00</td><td>310,00</td><td>0,13 %</td><td>4,94×</td><td>6,72 %</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <p class="mt-3 max-w-3xl text-xs leading-relaxed text-zinc-500">Las tasas globales se calculan con los totales, no promediando porcentajes. En estos datos ficticios se supone que los alcances no se solapan. El retorno solo considera el gasto publicitario.</p>
+      </section>
+    </main>
+    <footer class="border-t border-zinc-200">
+      <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs text-zinc-500 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
+        <p>Fred Flintstone · Proyecto educativo</p>
+        <p>Septiembre 2026 · EUR · Comisión del 15 %</p>
+      </div>
+    </footer>
+  </body>
+</html>
